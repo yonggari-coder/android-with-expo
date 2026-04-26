@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# android-with-expo 📱
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> 안드로이드 개발에 발을 담그기 위해 [Expo](https://expo.dev) + React Native + TypeScript 조합으로 시작한 학습 repo. 처음부터 네이티브 빌드를 잡지 않고, **Expo의 file-based routing**으로 빠르게 화면 단위 학습에 집중했습니다.
 
-## Get started
+## 🎯 학습 목표
 
-1. Install dependencies
+- Expo 프로젝트 구조와 file-based routing(`app/`)에 익숙해지기
+- React Native 컴포넌트로 화면 만들기
+- 안드로이드 에뮬레이터 / 실기기에 띄워보기 (네트워크 IP 자동 추출 스크립트 포함)
 
-   ```bash
-   npm install
-   ```
+## 🗂 구조 (요약)
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+android-with-expo/
+├── app/                # file-based routing (각 파일이 화면이 됨)
+├── components/         # 재사용 컴포넌트
+├── hooks/              # 커스텀 훅
+├── constants/
+├── assets/
+├── scripts/
+├── get_network_local_ip.js   # 실기기 디버깅용 로컬 IP 추출
+├── app.json
+└── package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠 기술 스택
 
-## Learn more
+- **Expo SDK** + **React Native**
+- **TypeScript**
+- **Expo Router** (file-based routing)
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 실행
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install
+npx expo start
+```
 
-## Join the community
+- Android 에뮬레이터 / iOS 시뮬레이터 / Expo Go(QR 스캔) 중 선택해 띄울 수 있습니다.
 
-Join our community of developers creating universal apps.
+## 💭 처음 모바일을 만져보며
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **웹과 다른 점**: 스크롤·터치·키보드 처리 등 웹에서는 브라우저가 알아서 해주던 것을 직접 다뤄야 한다는 걸 체감했습니다.
+- **Expo의 장점**: 네이티브 환경 셋업의 진입장벽을 크게 낮춰줘서, 학습 단계에서는 화면/네비게이션 같은 본질에 집중할 수 있었습니다.
+- **앞으로 더 해볼 것**: 상태 관리 라이브러리, 푸시 알림, 디바이스 API(카메라, 위치) 연동.
